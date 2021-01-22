@@ -24,7 +24,7 @@ class Store(Resource):
 
     def post(self, name):
         if StoreModel.find_by_name(name):
-            return {'message' : f'an Store with name {name} already exists'}, 400
+            return {'message' : 'an Store with name {} already exists'.format(name)}, 400
 
         store = StoreModel(name)
         
