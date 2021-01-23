@@ -1,4 +1,3 @@
-import sqlite3
 from db import db
 
 class ItemModel(db.Model):
@@ -20,7 +19,7 @@ class ItemModel(db.Model):
         return {'name': self.name, 'price': self.price}
 
     def save_to_db(self):
-        db.session.add(self)
+        db.session.add(self)    
         db.session.commit()
 
     @classmethod
